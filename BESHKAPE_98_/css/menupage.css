@@ -1,0 +1,303 @@
+/* DROPDOWN MENU */
+*{
+   transition: all .2s;
+}
+ul li {
+   position: relative; /* Ensure the dropdown positions relative to the parent */
+ }
+ ul li ul.dropdown {
+   position: absolute;
+   top: 100%; /* Place the dropdown below the parent */
+   left: 0;
+   width: max-content; /* Adjust width dynamically */
+   background-color: gray;
+   font-weight: 900;
+   display: none; /* Initially hidden */
+   z-index: 999;
+ }
+ 
+ ul li:hover ul.dropdown {
+   display: block; /* Show dropdown on parent hover */
+ }
+ 
+ ul li ul.dropdown li {
+   display: block;
+   padding: 10px; /* Add some padding for better visuals */
+   margin: 0;
+   padding: 10px;
+   text-align: start;
+   cursor: pointer;
+ }
+ 
+ ul li ul.dropdown li:hover {
+   background-color: var(--first-color-alt); /* Highlight on hover */
+ }
+ 
+/* CONTAINERS  */
+.container{
+   margin:0 auto;
+   /* border: solid 1px red; */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.title{
+  color: var(--first-color-alt);
+  margin-bottom: 20px;
+}
+.product{
+  border: gray solid 1px;
+  border-radius: 10px;
+  z-index: 0;
+  position: relative;
+  width: 200px;
+  height: 180px;
+}
+.product:hover{
+  color: var(--first-color-alt);
+  transform: translateY(3px);
+}
+.product img{
+  border-radius: 10px 10px 0 0;
+  height: 100px;
+  width: 180px;
+  margin: 10px;
+}
+.container .products-container{
+  /* border: yellow solid 1px; */
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(3,1fr);
+  gap: 15px 70px;
+  margin: 20px;
+  padding: 15px;
+}
+h3{
+  text-align: center;
+  font-size: 20px;
+}
+/* BUTTON */
+.product-btn{
+  z-index: 1;
+  position: absolute;
+  top: 55%;
+  left: 35%;
+  border: gray 1px solid;
+  padding: 5px 10px;
+}
+.product-btn:hover{
+  transform: translateY(-3px);
+}
+
+/* PREVIEW */
+.products-preview{
+   position: fixed;
+   top:0; left:0;
+   min-height: 100vh;
+   width: 100%;
+   background: rgba(0,0,0,.8);
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+
+.products-preview .preview {
+  display: none;
+  padding: 10px; /* Adjust for overall padding */
+  text-align: center;
+  background-color: rgba(225, 225, 225, 0); /* Optional: adjust transparency */
+  backdrop-filter: blur(20px);
+  position: relative;
+  margin: 2rem;
+  width: 600px; /* Increase/decrease width */
+  max-width: 90%; /* Ensure responsiveness */
+  border-radius: 10px;
+}
+.products-preview .preview.active{
+   display: inline-block;
+   border: solid 1px gray;
+}
+.products-preview .preview img {
+  height: 200px; /* Adjust as needed */
+  width: 350px;   /* Maintain full width of the preview */
+  border-radius: 10px;
+}
+.products-preview .preview .fa-times{
+   position: absolute;
+   top:1rem; right:1.5rem;
+   cursor: pointer;
+   color:#444;
+   font-size: 10px;
+}
+.products-preview .preview .fa-times:hover{
+   transform: rotate(90deg);
+}
+
+.products-preview .preview h3{
+   color: var(--first-color-alt);
+   padding: 0;
+   font-size: 30px;
+}
+
+.products-preview .preview .stars{
+   padding:1rem 0;
+   font-size: 15px;
+}
+
+.products-preview .preview .stars i{
+   color:#27ae60;
+}
+
+.products-preview .preview .stars span{
+   color:#999;
+}
+
+.products-preview .preview p{
+   line-height: 1.5;
+   font-size: 15px;
+   color:#777;
+}
+
+.products-preview .preview .price{
+   font-size: 15px;
+   padding: 5px;
+   margin: 5px;
+   color:#27ae60;
+}
+.products-preview .preview .buttons{
+   display: flex;
+   gap:1.5rem;
+   flex-wrap: wrap;
+}
+
+.products-preview .preview .buttons a{
+   flex:1 1 16rem;
+   padding:1rem;
+   font-size: 1.8rem;
+   color:#444;
+   border:.1rem solid #444;
+}
+
+.products-preview .preview .buttons a.cart{
+   background: #444;
+   color:#fff;
+}
+
+.products-preview .preview .buttons a.cart:hover{
+   background: #111;
+}
+
+.products-preview .preview .buttons a.buy:hover{
+   background: var(--first-color-alt);
+   color:#fff;
+}
+
+/* MEDIA QUERRIES */
+/* @media (max-width:1275px){
+   html{
+      font-size: 55%;
+   }
+   .products-preview .preview img{
+      height: 180px;
+      width: 450px;
+   }
+   .products-preview .preview {
+      width: 400px; /* Increase/decrease width *
+      height: 470px;
+    }
+   .container .products-container{
+    /* border: yellow solid 1px; *
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(4,1fr);
+    gap: 15px;
+    margin: 20px;
+    padding: 15px;
+  }
+  .product-btn{
+    z-index: 1;
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    border: gray 1px solid;
+  }
+} */
+
+/* @media (max-width:830px){
+   .products-preview .preview img{
+      height: 160px;
+      width: 450px;
+   }
+   .products-preview .preview {
+      width: 400px; /* Increase/decrease width *
+      height: 450px;
+    }
+   .container .products-container{
+    /* border: yellow solid 1px; *
+    display: grid;
+    grid-template: repeat(4, 1fr)/repeat(3,1fr);
+    gap: 15px;
+    margin: 20px;
+    padding: 15px;
+  }
+  .product-btn{
+    z-index: 1;
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    border: gray 1px solid;
+  }
+} */
+@media (max-width:765px){
+   .container .products-container{
+    /* border: yellow solid 1px; */
+    display: grid;
+    grid-template: repeat(6, 1fr)/ repeat(2,1fr);
+    gap: 15px;
+    margin: 20px;
+    padding: 15px;
+  }
+  .product-btn{
+    z-index: 1;
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    border: gray 1px solid;
+  }
+  h3{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 20px;
+  }
+  .price{
+    text-align: center;
+    font-size: 15px;
+    color: var(--first-color-alt);
+  }
+}
+@media (max-width:430px){
+   .container .products-container{
+    /* border: yellow solid 1px; */
+    display: grid;
+    grid-template: repeat(12, 1fr)/ 1fr;
+    gap: 15px;
+    margin: 20px;
+    padding: 15px;
+  }
+  .product-btn{
+    z-index: 1;
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    border: gray 1px solid;
+  }
+  h3{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 20px;
+  }
+  .price{
+    text-align: center;
+    font-size: 15px;
+    color: var(--first-color-alt);
+  }
+}

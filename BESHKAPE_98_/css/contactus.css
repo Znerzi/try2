@@ -1,0 +1,156 @@
+*{
+    transition: all .2s;
+ }
+ ul li {
+    position: relative; /* Ensure the dropdown positions relative to the parent */
+  }
+  ul li ul.dropdown {
+    position: absolute;
+    top: 100%; /* Place the dropdown below the parent */
+    left: 0;
+    width: max-content; /* Adjust width dynamically */
+    background-color: gray;
+    font-weight: 900;
+    display: none; /* Initially hidden */
+    z-index: 999;
+  }
+  
+  ul li:hover ul.dropdown {
+    display: block; /* Show dropdown on parent hover */
+  }
+  
+  ul li ul.dropdown li {
+    display: block;
+    padding: 10px; /* Add some padding for better visuals */
+    margin: 0;
+    padding: 10px;
+    text-align: start;
+    cursor: pointer;
+  }
+  
+  ul li ul.dropdown li:hover {
+    background-color: var(--first-color-alt); /* Highlight on hover */
+  }
+.contact-container{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.contact-left{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.contact-left-title{
+  font-weight: 600;
+  color:var(--first-color);
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.contact-left-title hr{
+  border: none;
+  width: 200px;
+  height: 5px;
+  background-color: #069C54;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-input{
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline:dashed #069C54;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 20px;
+}
+
+.contact-left textarea{
+  height: 200px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+
+.contact-input:focus{
+  border: 2px solid #32f295;
+}
+
+#g-map{
+  border-radius: 20px;
+  display: flex;
+  width: 800px;
+}
+.contact-left button{
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #ffff;
+  gap: 10px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(270deg,#069C54,#32f295 ); 
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth grow effect */
+}
+
+.b-grow:hover {
+  transform: scale(1.1); /* Slightly increase size */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  /* Contact Container */
+  .contact-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+
+  .contact-left textarea{
+    width: 90%;
+    margin-left: 20px;
+    height: 300px;
+    padding-top: 15px;
+    border-radius: 20px;
+  }
+
+  /* Contact Form */
+  .contact-left {
+    width: 90%;
+  }
+
+  .contact-input {
+    width: 100%;
+  }
+
+  /* Google Map */
+  #g-map {
+    width: 100%;
+    height: 300px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 680px) {
+  /* Title */
+  .contact-left-title {
+    font-size: 24px;
+  }
+
+  .contact-left-title hr {
+    width: 150px;
+  }
+
+  /* Buttons */
+  .contact-left button {
+    width: 29%;
+  }
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link href="css/home.css"rel="stylesheet"type="text/css"/>
+        <link rel="icon" href="img/bk-logo.jpg" type="image/x-icon">
+        <title>Besh Kape</title>
+    </head>
+    <body>
+
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!--========== HEADER ==========-->
+            <nav class="nav bd-container">
+                <a href="index.html" class="nav__logo">Besh Kape</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="menupage.html" class="nav__link">Menu</a></li>
+                        <li class="nav__item"><a href="aboutUS.html" class="nav__link">About us</a></li>
+                        <li class="nav__item"><a href="franchising.html" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="contactus.html" class="nav__link">Contact us</a></li>
+
+                        <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--========== HOME ==========-->
+            <section class="home" id="home">                
+                <div class="home__container bd-container bd-grid">
+                    <div class="home__data">
+                        <h1 class="home__title">Besh Kape</h1>
+                        <h2 class="home__subtitle">Brewed to Perfection, <br>sip with Passion</h2>
+                        <a href="menupage.html" class="button">Here's coffee</a>
+                    </div>
+    
+                    <img src="img/banner.jpg" alt="" class="home__img">
+                </div>
+            </section>
+            
+            <!--========== ABOUT ==========-->
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">About us</span>
+                        <h2 class="section-title about__initial">We make coffee and hearts</h2>
+                        <p class="about__description"></p>
+                            <a href="./about/aboutUS.html" class="button">Discover more</a>
+                        </div>
+
+                    <img src="img/about-landing.jpg" alt="" class="about__img">
+                </div>
+            </section>
+
+            <!--========== Note ==========-->
+            <section class="services section bd-container" id="services">
+                <span class="section-subtitle">From Our Store</span>
+                <h2 class="section-title">Just Remember!</h2>
+
+                <div class="services__container  bd-grid">
+                    <div class="services__content">
+                        <img src="./img/cup-shit.png" alt="" width="100px">
+                        <h3 class="services__title">Sip</h3>
+                        <p class="services__description">Take a moment to truly enjoy every sip of your drink, letting the flavors linger and delight your senses.</p>
+                    </div>
+
+                    <div class="services__content">
+                        <img src="./img/chill-coffee.png" alt="" width="100px">
+                        <h3 class="services__title">Chill</h3>
+                        <p class="services__description">Give yourself permission to take a break, rest, and recharge, allowing your mind and body to relax completely.</p>
+                    </div>
+
+                    <div class="services__content">
+                        <img src="./img/trash.png" alt="" width="100px">
+                        <h3 class="services__title">Trash</h3>
+                        <p class="services__description">Be mindful of the environment and ensure that you always throw your trash in the correct bin, helping to keep our community clean and sustainable.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== MENU ==========-->
+            <section class="menu section bd-container" id="menu">
+                <span class="section-subtitle">Special</span>
+                <h2 class="section-title">All times Favorites</h2>
+
+                <div class="container">
+
+                    <h3 class="app__description"> ICED ESPRESSO MENU </h3>
+                 
+                    <div class="products-container">
+                 
+                       <div class="product" data-name="p-1">
+                          <img src="img/sample_coffee_img.jpg" alt="">
+                          <h3>cafe americano</h3>
+                          <button class="product-btn button"><i class='bx bx-cart-alt'></i> View</button>
+                       </div>
+                 
+                       <div class="product" data-name="p-2">
+                          <img src="img/sample_coffee_img.jpg" alt="">
+                          <h3>Cafe Latte</h3>
+                          <button class="product-btn button"><i class='bx bx-cart-alt'></i> View</button>
+                       </div>
+                 
+                       <div class="product" data-name="p-3">
+                          <img src="img/sample_coffee_img.jpg" alt="">
+                          <h3>Spanish Latte</h3>
+                          <button class="product-btn button"><i class='bx bx-cart-alt'></i> View</button>
+                       </div>
+                 
+                       <div class="product" data-name="p-4">
+                          <img src="img/sample_coffee_img.jpg" alt="">
+                          <h3>Vanilla Latte</h3>
+                          <button class="product-btn button"><i class='bx bx-cart-alt'></i> View</button>
+                       </div>
+                    </div></div>
+
+
+                    <div class="products-preview">
+       
+                        <div class="preview" data-target="p-1">
+                           <i class="fas fa-times"></i>
+                           <img src="img/sample_coffee_img.jpg" alt="">
+                           <h3>Cafe Americano</h3>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                              <span>( 250 )</span>
+                           </div>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                           <div class="price">Small - 45.00</div>
+                           <div class="price">Large - 60.00</div>
+                           <div class="buttons">
+                              <a href="#" class="buy">Back</a>
+                              <a href="#" class="cart">Viewed</a>
+                           </div>
+                        </div>
+                     
+                        <div class="preview" data-target="p-2">
+                           <i class="fas fa-times"></i>
+                           <img src="img/sample_coffee_img.jpg" alt="">
+                           <h3>Cafe Latte</h3>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                              <span>( 250 )</span>
+                           </div>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                           <div class="price">Small - 45.00</div>
+                           <div class="price">Large - 60.00</div>
+                           <div class="buttons">
+                              <a href="#" class="buy">Back</a>
+                              <a href="#" class="cart">Viewed</a>
+                           </div>
+                        </div>
+                     
+                        <div class="preview" data-target="p-3">
+                           <i class="fas fa-times"></i>
+                           <img src="img/sample_coffee_img.jpg" alt="">
+                           <h3>Spanish Latte</h3>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                              <span>( 250 )</span>
+                           </div>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                           <div class="price">Small - 50.00</div>
+                           <div class="price">Large - 65.00</div>
+                           <div class="buttons">
+                              <a href="#" class="buy">Back</a>
+                              <a href="#" class="cart">Viewed</a>
+                           </div>
+                        </div>
+                    </div>
+            </section>
+
+
+
+
+            <!--===== APP =======-->
+            <section class="app section bd-container">
+                <div class="app__container bd-grid">
+                    <div class="app__data">
+                        <span class="section-subtitle app__initial">Mobile Application</span>
+                        <h2 class="section-title app__initial">App is available</h2>
+                        <p class="app__description">Download our application to make purchases, process payments, deliver your order <strong>door-to-door</strong>, and explore additional features</p>
+                        <div class="app__stores">
+                            <a href="https://beshkape.zobaze.shop/catalog"><img src="img/zobaze.png" alt="50%" class="app__store"></a>
+                        </div>
+                    </div>
+
+                    <img src="img/app-order.jpg" alt="" class="app__img">
+                </div>
+            </section>
+
+            <!--========== CONTACT US ==========-->
+            <section class="contact section bd-container" id="contact">
+                <div class="contact__container bd-grid">
+                    <div class="contact__data">
+                        <span class="section-subtitle contact__initial">Let's talk</span>
+                        <h2 class="section-title contact__initial">Contact us</h2>
+                        <p class="contact__description" color: white>Just Click!</p>
+                    </div>
+
+                    <div class="contact__button">
+                        <a href="contactus.html" class="button">Contact us now</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </main>
+
+        <div class="testimonial">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <h1>❝</h1>
+                         <p>"Wow, this coffee is really good—smooth and a bit sweet. Great job!"</p>★★★★★<br>
+                         <img src="img/team4.png" width="50px">
+                         <h3>Carl T. Boq</h3>
+    
+      
+                    </div>
+                <div class="col-3">
+                    <h1>❝</h1>
+                     <p>"This coffee tastes great—nice and smooth. Perfect!"</p>★★★☆☆<br>
+                     <img src="img/team5.png" width="50px">
+                     <h3>Jhode vils</h3>
+    
+    
+                    </div>
+               <div class="col-3">
+                <h1>❝</h1>
+                 <p>"Love this coffee! It's so flavorful and just the right amount of sweet."</p>★★★☆☆<br>
+                 <img src="img/team7.png" width="50px">
+                 <h3>Andrew</h3>
+    
+    
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <h3><a href="#" class="footer__link"><strong>Follow us!</strong></a></h3>
+                    <span class="footer__description">Socia Media's</span>
+                    <div>
+                        <a href="https://www.facebook.com/profile.php?id=100095014494881" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/beshkape/?igsh=MWh0MjR1enNwcTlhNw%3D%3D#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Services</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Delivery</a></li>
+                        <li><a href="#" class="footer__link">Branches</a></li>
+                        <li><a href="#" class="footer__link">Franchising</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Information</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100095014494881" class="footer__link">Event</a></li>
+                        <li><a href="./contactus/contactus.html" class="footer__link">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Address</h3>                           
+                    <ul>
+                        <li>Sta. Mesa - Philippines</li>
+                        <li><a href="https://maps.app.goo.gl/aCnkfMch3CDyjuaLA" class="footer__link">3319C 2nd Street (Gitna) V. Mapa</a></li>
+                        <li>Landmark: <strong>Amaia Skies Sta. Mesa.</strong></li>
+                        <li>0945 461 8668</li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy"><strong>Pogues &#169;</strong> all right reserved.</p>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="jsfunctions/functions.js"></script>                                        
+    </body>
+</html>

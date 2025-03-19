@@ -1,0 +1,617 @@
+/* Global Styles */
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(0, 0, 0, 0.87);
+    background-color:#1D2521;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Default light theme colors */
+    --title-color: rgb(4, 83, 4); /* Default color for light theme */
+    --text-color: #333;
+    --body-color: #f0f0f0;
+    --container-color: #fff;
+  }
+  
+  body.dark-theme {
+    --title-color: #F1F3F2; /* Dark theme title color */
+    --text-color: #C7D1CC;
+    --body-color: #1D2521;
+    --container-color: #27302C;
+  }
+    
+  
+    
+   /* Start of modal component */
+  .modal::backdrop {
+      background: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Modal container styling */
+  .container {
+      position: relative;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      max-width: 800px; /* Default max width for desktop/laptop */
+      width: 100%;
+      box-sizing: border-box;
+  }
+  
+  .modal {
+   margin: 0;
+   padding: 0;
+   margin-left: 22rem;
+   width: 50%;
+  }
+  
+  /* Close button styling */
+  #close-modal {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #181818;
+  }
+  
+  /* Header styling */
+  .container header {
+      font-size: 1.5rem;
+      color: #333;
+      font-weight: 500;
+      text-align: center;
+  }
+  
+  /* Form styling */
+  .form {
+      margin-top: 30px;
+  }
+  
+  /* Input box styling */
+  .input-box {
+      width: 100%;
+      margin-top: 20px;
+      gap: 20px;
+  }
+  
+  .input-box label {
+      color: #333;
+      font-size: 1rem;
+      margin-bottom: 8px;
+  }
+  
+  .input-box input,
+  .select-box select {
+      position: relative;
+      height: 50px;
+      width: 100%; /* Ensure full width of input/select */
+      padding: 0 15px;
+      box-sizing: border-box;
+      outline: none;
+      font-size: 1rem;
+      color: #707070;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+  }
+  
+  /* Select box styling */
+  .select-box select {
+      width: 100%;
+      height: 50px;
+  }
+  
+  /* Column for form items */
+  .input-box {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px; /* Adds space between each row */
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between elements in the column */
+  }
+  
+  .foot-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between elements in the footer column */
+  }
+  
+  .submit {
+    margin-top: 20px; /* Add spacing above the submit button */
+  } 
+  
+  /* Gender box styling */
+  .gender-box {
+      margin-top: 20px;
+  }
+  
+  .gender-box h3 {
+      color: #333;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+  }
+  
+  .gender-option,
+  .gender {
+      display: flex;
+      align-items: center;
+      column-gap: 50px;
+      flex-wrap: wrap;
+  }
+  
+  .gender {
+      column-gap: 5px;
+  }
+  
+  .gender input {
+      accent-color: rgb(130, 106, 251);
+  }
+  
+  .gender input,
+  .gender label {
+      cursor: pointer;
+  }
+  
+  .gender label {
+      color: #707070;
+  }
+  
+  /* Submit button styling */
+  .submit {
+      height: 55px;
+      width: 50%;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 30px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: rgb(130, 106, 251);
+      margin-left: 25%;
+      text-align: center;
+  }
+  
+  .submit:hover {
+      background: rgb(88, 56, 250);
+  }
+  
+  /* Responsive Styles */
+  
+  /* Small devices (tablets and below) */
+  @media screen and (max-width: 768px) {
+      .modal{
+       height: auto;
+       width: 50vh;
+       margin-left: 5rem;
+      }
+      .container {
+          width: 200vh;
+          padding: 15px;
+          margin-left: 20px;
+      }
+  
+      #close-modal {
+          font-size: 15px;
+          top: 5px;
+          right: 5px;
+      }
+  
+      .container header {
+          font-size: 1.5rem;
+      }
+  
+      .input-box input,
+      .select-box select {
+          height: 45px;
+          font-size: 0.9rem;
+          gap: 20px;
+      }
+  
+      .submit {
+          width: 100%; /* Make the submit button full width on small screens */
+          margin-left: 0;
+          font-size: 1.1rem;
+      }
+  
+      .foot-column {
+          gap: 10px;
+      }
+  
+      .column {
+          flex-direction: column; /* Stack form elements vertically on small screens */
+      }
+  
+      .gender-option {
+          column-gap: 30px;
+      }
+  
+      .gender {
+          column-gap: 5px;
+      }
+  }
+  
+  /* Medium devices (desktops and laptops) */
+  @media screen and (max-width: 1200px) {
+      .container {
+          max-width: 90%;
+          padding: 20px;
+      }
+      .modal{
+          margin-left: 50px;
+      }
+      .input-box input,
+      .select-box select {
+          width: 100%;
+      }
+  
+      .submit {
+          width: 100%;
+          margin-left: 0;
+      }
+  }
+  
+  /* Large devices (bigger desktops) */
+  @media screen and (min-width: 1200px) {
+      .container {
+          max-width: 800px;
+          padding: 25px;
+       
+      }
+  
+      .submit {
+          width: 50%;
+          margin-left: 25%;
+      }
+  }
+  
+  /* End of Modal */
+  
+  
+  /* Start of hero section*/
+  /* Base Styles */
+  .hero-section {
+      background-image: url("");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-right: 0; /* Center text for smaller screens */
+      margin-left: 2rem;
+    }
+    
+    .hero-section h1 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 900;
+      font-size: 64px;
+      width: 500px;
+      text-transform: capitalize;
+      margin: 0 auto 20px auto; /* Center horizontally and add bottom margin */
+      color: #45a049;
+    
+    }
+    
+    .hero-section p {
+      font-family: "OpenSans-Regular";
+      font-weight: 400;
+      font-size: 18px;
+      width: 500px;
+      padding: 30px 0;
+      margin: 0 auto; /* Center horizontally */
+    }
+    
+    .hero-img {
+      flex-grow: 1;
+      overflow: hidden;
+      margin: 20px; 
+      background-image: url("../img/beans.png");
+      background-size: contain;
+      background-repeat: no-repeat;/* Adjusted margin for better responsiveness */
+    }
+    
+    .hero-img img {
+      width: 120%; /* Ensure image scales with its container */
+      height: auto;
+      display: block; /* Remove any inline spacing */
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); /* Adjusted drop-shadow */
+    }
+    
+    /* Media Queries */
+    
+    /* For Tablets and Small Screens (Max width: 768px) */
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px; /* Add padding for better spacing */
+      }
+    
+      .hero-section h1 {
+        font-size: 48px; /* Reduce font size */
+        width: 80%; /* Adjust width */
+        margin: 0 auto 15px auto;
+        margin-left: 10px; /* Center and add bottom margin */
+      }
+    
+      .hero-section p {
+        font-size: 16px; /* Reduce font size */
+        width: 90%; /* Adjust width */
+        padding: 20px 0;
+        margin-left: 5px;
+        margin-right: 20px; /* Adjust padding */
+      }
+    
+      .hero-img {
+        margin: 15px 0; /* Adjust margin for vertical stacking */
+      }
+    
+      .hero-img img {
+        width: 80%; /* Reduce image width */
+        margin: 0 auto; /* Center image */
+      }
+    }
+    
+    /* For Mobile Screens (Max width: 480px) */
+    @media (max-width: 480px) {
+      .hero-section h1 {
+        margin-left: 10px;
+        font-size: 36px; /* Further reduce font size */
+      }
+    
+      .hero-section p {
+        margin-left: 0;
+        font-size: 12px; /* Further reduce font size */
+      }
+    
+      .hero-img img {
+        width: 100%; /* Full width for mobile */
+      }
+    }
+  
+    /* Base Styles */
+  #btn {
+      position: relative;
+      display: block; /* Ensures the button takes up the full width available */
+      margin: 0 auto; /* Centers the button horizontally */
+      padding: 10px 20px;
+      border-radius: 7px;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 2px;
+      background: transparent;
+      color: var(--title-color); 
+      overflow: hidden;
+      box-shadow: 0 0 0 0 transparent;
+      transition: all 0.2s ease-in;
+      text-align: center; /* Centers text inside the button */
+    }
+    
+    #btn:hover {
+      color: #ddd;
+      background: rgb(102, 66, 13);
+      box-shadow: 0 0 30px 5px rgba(174, 238, 25, 0.815);
+    }
+    
+    #btn:active {
+      box-shadow: 0 0 0 0 transparent;
+      transition: box-shadow 0.2s ease-in;
+    }
+    
+    /* Media Queries */
+    
+    /* For Tablets and Small Screens (Max width: 768px) */
+    @media (max-width: 768px) {
+      #btn {
+        width: 50%; /* Button takes up 80% of the screen width */
+        font-size: 12px;
+        margin-left: 30%; /* Slightly smaller font size */
+      }
+    }
+    
+    /* For Mobile Screens (Max width: 480px) */
+    @media (max-width: 480px) {
+      #btn {
+        width: 30%; /* Button takes up 90% of the screen width */
+        font-size: 10px;
+        margin-left: 30%px; /* Smaller font size for better readability */
+      }
+    }
+    
+    
+  /* End of hero section */
+   
+    
+    /* Button */
+    
+    
+    .text {
+      position: absolute;
+      top: 15%;
+      left: -150%;
+      color: #181818;
+      transition: all 0.3s ease-in;
+    }
+    
+    .text span {
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    
+    .text p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .card:hover .text {
+      top: 15%;
+      left: 5%;
+    }
+  
+    
+    /* Custom Button Hover Effect */
+    button {
+      margin-left: 200px;
+      position: relative;
+      padding: 10px 20px;
+      border-radius: 7px;
+      border: 1px solid rgb(61, 106, 255);
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 2px;
+      background: transparent;
+      color: #fff;
+      overflow: hidden;
+      box-shadow: 0 0 0 0 transparent;
+      transition: all 0.2s ease-in;
+      height: fit-content;
+      width: fit-content;
+    }
+    
+    button:hover {
+      background: rgb(204, 178, 28);
+      box-shadow: 0 0 30px 5px rgba(143, 173, 8, 0.815);
+    }
+    
+    button:hover::before {
+      animation: sh02 0.5s linear;
+    }
+    
+    button::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 86%;
+      position: absolute;
+      top: 7%;
+      left: 0;
+      opacity: 0;
+      background: #fff;
+      box-shadow: 0 0 50px 30px #fff;
+      transform: skewX(-20deg);
+    }
+    
+    @keyframes sh02 {
+      from {
+        opacity: 0;
+        left: 0%;
+      }
+    
+      50% {
+        opacity: 1;
+      }
+    
+      to {
+        opacity: 0;
+        left: 100%;
+      }
+    }
+    
+    button:active {
+      box-shadow: 0 0 0 0 transparent;
+      transition: box-shadow 0.2s ease-in;
+    }
+    
+    /* Start of alert */ 
+   /* Backdrop */
+  .alert-backdrop::backdrop {
+      background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .alert-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+      z-index: 9998; /* Behind the alert */
+      display: none; /* Initially hidden */
+  }
+  
+  /* Custom Alert */
+  #customAlert {
+      position: fixed;
+      top: 30%; /* Center vertically */
+      left: 30%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Offset to align the center */
+      width: 80%; /* Take up 80% of the screen width */
+      max-width: 500px; /* Limit the width for larger screens */
+      font-size: 18px; /* Adjust font size */
+      padding: 20px; /* Add spacing */
+      background: #ffffff;
+      color: #291d03;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 9999; /* In front of the backdrop */
+      border-radius: 8px;
+      text-align: center;
+      display: none; /* Initially hidden */
+  }
+  
+  /* Custom Alert Button */
+  #customAlert button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #000000;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 15px;
+      margin-left:0;
+  }
+  
+  #customAlert button:hover {
+      background-color: #45a049;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+      #customAlert {
+          top: 30%; /* Center vertically */
+          left: 2%;
+          width: 90%; /* Adjust width for tablets and smaller devices */
+          font-size: 16px; /* Adjust font size */
+          padding: 15px; /* Adjust padding */
+      }
+  
+      #customAlert button {
+          font-size: 14px; /* Adjust button font size */
+      }
+  }
+  
+  @media (max-width: 480px) {
+      #customAlert {
+          width: 95%; /* Maximize space for small screens */
+          font-size: 14px; /* Smaller font size */
+          padding: 10px; /* Reduce padding */
+      }
+  
+      #customAlert button {
+          padding: 8px 15px; /* Adjust button padding */
+          font-size: 12px; /* Smaller button font size */
+      }
+  }
+  
+  
+      /* end of alert */ 
